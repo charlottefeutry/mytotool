@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LoginController!{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid d-flex">
+        <div class="form-connexion row justify-content-center">
+        <div class="col-12"> <h1>titre</h1></div>
+        <div class="col-12">
+    <form class="center-button" method="post" action="{{ path('login') }}">
+        <div class="form-group">
+            <label for="name">Identifiant</label>
+            <input type="text" class="form-control" name="identifiant" >
+        </div>
+        <button type="submit" class="btn color-button-2 color-titre-2 ">Envoyer</button>
+    </form>
+        </div> </div>
+    </div>
+{% endblock %}

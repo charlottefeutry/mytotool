@@ -1,0 +1,160 @@
+.mg-l1{
+    margin-left: 1rem !important;
+}
+
+.mg-t2{
+    margin-top: 2rem !important;
+}
+
+.row-noflex{
+    display: none !important;
+}
+.list-group-item:last-child {
+    margin-bottom: 0.5rem;
+}
+
+.mg-b2{
+    margin-bottom: 2rem;
+}
+
+.right-column {
+    background-image: url(../assets/fond-mytotool.svg);
+    margin-left: -1px;
+}
+
+.loginbody {
+    background-image: url(../assets/fond-mytotool.svg);
+}
+
+.form-connexion.row {
+    width: 100%;
+    align-self: center;
+}
+
+.col-12 h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.center-button {
+    text-align: center;
+}
+
+.container-fluid.d-flex {
+    height: 100vh;
+    padding-bottom: 200px;
+}
+
+.col-3.background-color {
+    background-color: #bdebdd;
+}
+
+.navbar.background-color {
+    background-color: #bdebdd;
+}
+
+.color-button-1{
+    background-color: #fdf7dc;
+}
+
+.color-titre-1{
+    color: #f6ce46;
+}
+
+a:hover {
+    color: #f6ce46;
+}
+
+.color-titre-today{
+    color:#f6ce46;
+}
+
+.color-button-2{
+    background-color: #D6C3FF;
+}
+
+.color-titre-2{
+    color: #A794CF;
+}
+
+.color-button-3{
+    background-color: #bdebdd;
+}
+
+.color-titre-3{
+    color: #82C4B0;
+}
+
+.border-button{
+    border-radius: 30px;
+}
+
+.border-color-button{
+    border-style : none;
+}
+.text-align{
+    text-align: center;
+}
+
+.color-titre-button{
+    color: white;
+}
+
+.list-group-item:last-child{
+    border-radius: 40px;
+    color: #A794CF;
+}
+
+.badge {
+    background-color: darkviolet;
+    color: white;
+}
+
+.col-10.color-titre-tache {
+    color: #A794CF;
+}
+.col-12.color-ajouter-tache {
+    color: darkcyan;
+}
+
+.btn-background-color {
+    background-color: #fdf7dc;
+    color: #f6ce46;
+}
+
+.modal-title {
+    color: darkcyan;
+}
+
+.color-button-creer-liste{
+    background-color: #D6C3FF;
+    color:white;
+}
+
+.color-button-close{
+    background-color: #fdf7dc;
+}
+
+.modal-body{
+    border-color: blueviolet;
+}
+
+.form-control:disabled {
+    background-color: white;
+    border-color: blueviolet;
+}
+
+.input-group-text {
+    border-color: blueviolet;
+}
+
+.card-body {
+    block-size: 220px;
+    padding-top: 90px
+}
+
+
+
+ul {
+    list-style-type: none;
+}

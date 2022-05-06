@@ -1,0 +1,143 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ListController!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('style/style.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <nav class="navbar navbar-light background-color">
+        <a class="navbar-brand" href="{{ path('home') }}">
+            <img src="{{ asset('assets/logo.jpg') }}" width="30" height="30"
+                 class="d-inline-block align-top" alt="">
+            My Totool
+        </a>
+        <div class="col-2 btn-group">
+            <button type="button" class="btn btn-background-color dropdown-toggle" data-toggle="dropdown"
+                    aria-expanded="false">
+                Mon compte
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Paramètres</a>
+                <a class="dropdown-item" href="#">Ajouter des membres</a>
+                <a class="dropdown-item" href="/logout">Déconnexion</a>
+                <div class="dropdown-divider"></div>
+            </div>
+        </div>
+
+    </nav>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 background-color">
+
+                <div class="row d-flex justify-content-center">
+                    <h2>To do list</h2>
+                </div>
+
+                <div >
+                    <ul id="listMenu" class="list-group">
+                        {% for listeTaches in listes %}
+                            <a href="{{ path('app_liste_list', {listId: listeTaches.id}) }}"><li class="list-group-item d-flex justify-content-between align-items-center list-group-item:last-child">{{ listeTaches.nom }}
+                                    <span class="badge rounded-pill"> 14</span></li></a>
+                            <button type="submit" class="supprimerliste" data-listId="{{ listeTaches.id }}">Supprimer la liste</button>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- Button trigger modal -->
+                <div class="d-flex justify-content-center">
+                    <button type="button" class=" btn btn-background-color bouton-creer-compte:hover mg-t2 mg-b2 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Créer une liste
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Créer la nouvelle liste</h5>
+                                <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="text" id="createList" name="nom" required placeholder="Nom de la tâche"
+                                       minlength="4" maxlength="20" size="50">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn color-button-close" id="closeModal" data-bs-dismiss="modal">Annuler</button>
+                                <button type="button" id="saveCreateList"  class="btn color-button-creer-liste">Créer liste</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-9 right-column">
+                <div class="row">
+                <div class="col-12"> <h2> {{ listeDetails.nom }}</h2></div>
+                    <ul class="list-point" id="listTask">
+                        {% for tache in listeDetails.taches %}
+                            <li id="li-{{ tache.id }}">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input type="checkbox" class="checkboxTache" data-tacheId="{{ tache.id }}" aria-label="Checkbox for following text input">
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control " aria-label="Text input with checkbox"
+                                           value="{{ tache.titre }}" disabled>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                </div>
+
+                <div class="row">
+                    <!-- Button trigger modal -->
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class=" btn btn-background-color bouton-creer-compte:hover mg-t2 mg-b2 "
+                                data-bs-toggle="modal" data-bs-target="#addTaskModal">
+                            Créer une tache
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel2">Créer la nouvelle tache</h5>
+                                    <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" id="createTask" name="nom" required placeholder="Nom de la tâche"
+                                           minlength="4" maxlength="20" size="50">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn color-button-close" id="closeModal2"
+                                            data-bs-dismiss="modal">Annuler
+                                    </button>
+                                    <button type="button" id="saveCreateTask" data-listId="{{ listeDetails.id }}" class="btn color-button-creer-liste">Créer
+                                        tache
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
