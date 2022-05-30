@@ -2,6 +2,10 @@
     margin-left: 1rem !important;
 }
 
+.mg-l3{
+    margin-left: 30px;
+}
+
 .mg-t2{
     margin-top: 2rem !important;
 }
@@ -14,7 +18,7 @@
 }
 
 .mg-b2{
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .right-column {
@@ -122,6 +126,11 @@ a:hover {
     color: #f6ce46;
 }
 
+.btn-background-color.btn-width{
+    width: 180px;
+    margin: 10px;
+}
+
 .modal-title {
     color: darkcyan;
 }
@@ -153,8 +162,23 @@ a:hover {
     padding-top: 90px
 }
 
-
-
 ul {
     list-style-type: none;
 }
+
+.h2-color {
+    color: blueviolet !important;
+}
+
+.h2-margin {
+    margin: 30px;
+}
+
+btn-align-margin {
+    margin: 30px;
+}
+
+btn-margin-left{
+    margin-left: 70px;
+}
+

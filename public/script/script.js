@@ -16,8 +16,6 @@ $(document).ready(function() {
 
 
 
-
-
                     $('#closeModal').click();
                 }
             });
@@ -62,7 +60,8 @@ $(document).ready(function() {
                 type: 'POST',
                 data: {nom: nom},
                 success: function (data){
-                    $('#listMenu').append(`<li class="list-group-item d-flex justify-content-between align-items-center list-group-item:last-child">  <a href="">${nom} </a></li>`);
+                    $('#listMenu').append(`<li class="list-group-item d-flex justify-content-between align-items-center list-group-item:last-child">  
+                    4<a href="">${nom} </a></li>`);
                     $('#closeModal').click();
                 }
             });

@@ -10,9 +10,8 @@
 {% block body %}
     <nav class="navbar navbar-light background-color">
         <a class="navbar-brand" href="{{ path('home') }}">
-            <img src="{{ asset('assets/logo.jpg') }}" width="30" height="30"
+            <img src="{{ asset('assets/my-totool.svg') }}" width="60" height="60"
                  class="d-inline-block align-top" alt="">
-            My Totool
         </a>
         <div class="col-2 btn-group">
             <button type="button" class="btn btn-background-color dropdown-toggle" data-toggle="dropdown"
@@ -32,18 +31,18 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-3 background-color">
+            <div class="col-3 background-color ">
 
-                <div class="row d-flex justify-content-center">
+                <div class="row d-flex justify-content-center h2-color">
                     <h2>To do list</h2>
                 </div>
 
-                <div >
+                <div>
                     <ul id="listMenu" class="list-group">
                         {% for listeTaches in listes %}
-                            <a href="{{ path('app_liste_list', {listId: listeTaches.id}) }}"><li class="list-group-item d-flex justify-content-between align-items-center list-group-item:last-child">{{ listeTaches.nom }}
+                            <a href="{{ path('app_liste_list', {listId: listeTaches.id}) }}"><li class="list-group-item d-flex justify-content-between align-items-center list-group-item:last-child h2-color btn-margin-left">{{ listeTaches.nom }}
                                     <span class="badge rounded-pill"> 14</span></li></a>
-                            <button type="submit" class="supprimerliste" data-listId="{{ listeTaches.id }}">Supprimer la liste</button>
+                            <button type="submit" class="supprimerliste btn btn-background-color btn-width " data-listId="{{ listeTaches.id }}">Supprimer la liste</button>
                         {% endfor %}
                     </ul>
                 </div>
@@ -78,7 +77,7 @@
 
             <div class="col-9 right-column">
                 <div class="row">
-                <div class="col-12"> <h2> {{ listeDetails.nom }}</h2></div>
+                <div class="col-12 h2-color h2-margin"> <h2> {{ listeDetails.nom }}</h2></div>
                     <ul class="list-point" id="listTask">
                         {% for tache in listeDetails.taches %}
                             <li id="li-{{ tache.id }}">
@@ -99,10 +98,10 @@
 
                 <div class="row">
                     <!-- Button trigger modal -->
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class=" btn btn-background-color bouton-creer-compte:hover mg-t2 mg-b2 "
+                    <div class="d-flex justify-content-center ">
+                        <button type="button" class=" btn btn-background-color bouton-creer-compte:hover mg-t2 mg-b2 mg-l3"
                                 data-bs-toggle="modal" data-bs-target="#addTaskModal">
-                            Créer une tache
+                            Créer une tâche
                         </button>
                     </div>
 
